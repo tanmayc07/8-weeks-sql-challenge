@@ -8,3 +8,12 @@ FROM dannys_diner.sales sales
 GROUP BY sales.customer_id
 ORDER BY sales.customer_id;
 ```
+
+## 2. How many days has each customer visited the restaurant?
+
+```
+SELECT customer_id, COUNT(DISTINCT order_date)
+FROM dannys_diner.sales
+GROUP BY customer_id
+ORDER BY customer_id;
+```
